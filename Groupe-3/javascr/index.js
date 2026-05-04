@@ -130,20 +130,20 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         name: 'Alex Smith',
         role: 'Envato Customer',
-        img: '/image/1 (1).jpg',
-        text: "Lorem Ipsum..."
+        img: './image1/1 (1).jpg',
+        text: "Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book."
       },
       {
         name: 'Alex Smith',
         role: 'Envato Customer',
-        img: '/image/1 (1).jpg',
-        text: "Lorem Ipsum..."
+        img: './image1/1 (1).jpg',
+        text: "Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book."
       },
       {
         name: 'Alex Smith',
         role: 'Envato Customer',
-        img: '/image/1 (1).jpg',
-        text: "Lorem Ipsum..."
+        img: './image1/1 (1).jpg',
+        text: "Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book."
       }
     ];
 
