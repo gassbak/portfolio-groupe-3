@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daniels is a responsive creative template">
+  <title>Daniels</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            montserrat: ['Montserrat', 'sans-serif'],
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            primary: '#e74c3c',
+            dark: '#1a1a2e',
+            darker: '#0a0a0a',
+          },
+          animation: {
+            fadeInUp: 'fadeInUp 0.6s ease forwards',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/index.css">
+
+
+</head>
+<body class="font-poppins text-gray-700 ">
+<!-- Bouton retour -->
+<a href="index.html" 
+   class="fixed top-2 left-2 z-[999] w-10 h-10 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center text-gray hover:bg-red-500 hover:text-black transition-all duration-300">
+   
+   <i class="fa-solid fa-arrow-left"></i>
+</a>
+  <!-- ====== NAVBAR ====== -->
+   <div>
+
+   
+  <nav class="fixed top-0 left-0 w-full  backdrop-blur-sm z-50 py-4 pt-6 " >
+      
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between pt-6 ">
+      <a href="#home" id="logo" class="text-black font-montserrat font-bold text-xl tracking-widest ">Daniels</a>
+
+      <!-- Desktop Links -->
+      <ul class="hidden md:flex items-center gap-7">
+        <li><a href="#home" class="nav-link active text-black/80 text-xs font-medium uppercase tracking-widest  transition-colors duration-300">Home</a></li>
+        <li><a href="#about" class="nav-link text-black/80 text-xs font-medium uppercase tracking-widest  transition-colors duration-300">About</a></li>
+        <li><a href="#services" class="nav-link text-black/80 text-xs font-medium uppercase tracking-widest  transition-colors duration-300">Services</a></li>
+        <li><a href="#portfolio" class="nav-link text-black/80 text-xs font-medium uppercase tracking-widest  transition-colors duration-300">Works</a></li>
+        <li><a href="#clients" class="nav-link text-black/80 text-xs font-medium uppercase tracking-widest  transition-colors duration-300">Clients</a></li>
+        <li><a href="#blog" class="nav-link text-black/80 text-xs font-medium uppercase tracking-widest  transition-colors duration-300">Blog</a></li>
+        <li><a href="#contact" class="nav-link text-black/80 text-xs font-medium uppercase tracking-widest  transition-colors duration-300">Contact</a></li>
+      </ul>
+
+      <!-- Mobile burger -->
+      <button id="burger" class="md:hidden text-black text-2xl focus:outline-none">☰</button>
+    </div>
+      <!-- overlay for mobile menu  -->
+     <!-- <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-40"></div> -->
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden  px-6 pb-4 mt-2 bg-white">
+      <ul class="flex flex-col gap-4 text-center justify-center">
+        <li><a href="#home" class="text-black text-sm uppercase tracking-widest ">Home</a></li>
+        <li><a href="#about" class="text-black text-sm uppercase tracking-widest ">About</a></li>
+        <li><a href="#services" class="text-black text-sm uppercase tracking-widest ">Services</a></li>
+        <li><a href="#portfolio" class="text-black text-sm uppercase tracking-widest ">Works</a></li>
+        <li><a href="#clients" class="text-black text-sm uppercase tracking-widest ">Clients</a></li>
+        <li><a href="#blog" class="text-black text-sm uppercase tracking-widest ">Blog</a></li>
+        <li><a href="#contact" class="text-black text-sm uppercase tracking-widest ">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ====== HEADER ====== -->
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden
+  bg-[linear-gradient(to_bottom,rgba(15,25,35,0.55),rgba(20,40,30,0.6)),url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&q=80')]
+  bg-cover bg-center">
+  <!-- Canvas -->
+  <canvas id="particles-canvas" class="absolute inset-0 w-full h-full z-0"></canvas>
+   
+    <div class="relative z-10 max-w-6xl mx-auto px-6 pt-20">
+      <p class="text-white text-sm font-medium uppercase tracking-[5px] mb-5 text-center">Hello</p>
+      <h1 class="text-white font-montserrat font-400 text-5xl md:text-7xl leading-tight mb-8">
+        I Am <span id="typed-text" class="text-white font-bold text-5xl md:text-7xl"></span>
+      </h1>
+      <!-- Social Icons -->
+      <div class="flex gap-3 mt-6 text-center justify-center">
+        <a href="#0" class="w-10 h-10 border border-white/30 rounded-full flex items-center justify-center text-white text-sm font-bold  hover:border-primary transition-all duration-300">
+          <i class="fa-brands fa-facebook-f" style="color: rgb(245, 244, 248);"></i>
+        </a>
+        <a href="#0" class="w-10 h-10 border border-white/30 rounded-full flex items-center justify-center text-white text-sm font-bold  hover:border-primary transition-all duration-300">
+          <i class="fa-brands fa-twitter" style="color: rgb(245, 244, 248);"></i>
+        </a>
+        <a href="#0" class="w-10 h-10 border border-white/30 rounded-full flex items-center justify-center text-white text-xs font-bold  hover:border-primary transition-all duration-300">
+          <i class="fa-brands fa-linkedin-in" style="color: rgb(245, 244, 248);"></i>
+        </a>
+        <a href="#0" class="w-10 h-10 border border-white/30 rounded-full flex items-center justify-center text-white text-xs font-bold  hover:border-primary transition-all duration-300">
+          <i class="fa-brands fa-behance" style="color: rgb(245, 244, 248);"></i>
+        </a>
+        <a href="#0" class="w-10 h-10 border border-white/30 rounded-full flex items-center justify-center text-white text-sm  hover:border-primary transition-all duration-300">
+          <i class="fa-brands fa-youtube" style="color: rgb(242, 242, 247);"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- ====== ABOUT ====== -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+
+        <!-- Image placeholder -->
+        <div class="flex-shrink-0 w-full md:w-72 h-100 rounded-md flex items-center justify-center text-8xl"
+          style="background: linear-gradient(135deg, #ddd, #bbb);"><img src="./image1/hero.jpg" alt="profil" class="h-[100%] w-[100%]"></div>
+
+        <!-- Content -->
+        <div class="flex-1">
+          <h3 class="font-montserrat font-bold text-3xl text-gray-800 mb-2">About Me.</h3>
+          <span class="text-gray-500 text-xl font-medium block mb-5">UI / UX Designer &amp; Web Developer</span>
+          <p class="text-gray-500 text-md leading-relaxed mb-6">
+            I am <strong>Bakary gassama</strong>. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the  1960s with the release of Letraset sheets.
+          </p>
+
+          <!-- Skills -->
+
+          <div class="space-y-4 mb-8">
+            <div>
+              <div class="flex justify-between text-sm font-semibold text-gray-700 mb-1"><span>Web Design</span><span>95%</span></div>
+              <div class="h-5 bg-gray-200 rounded"><div class="skill-fill h-full bg-[#1c1c1c] rounded" data-width="95%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm font-semibold text-gray-700 mb-1"><span>Branding</span><span>80%</span></div>
+              <div class="h-5 bg-gray-200 rounded"><div class="skill-fill h-full bg-[#1c1c1c] rounded" data-width="80%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm font-semibold text-gray-700 mb-1"><span>Development</span><span>90%</span></div>
+              <div class="h-5 bg-gray-200 rounded"><div class="skill-fill h-full bg-[#1c1c1c] rounded" data-width="  90%"></div></div>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap gap-4">
+            <a href="#0" class="px-7 py-3 bg-[#1c1c1c] text-white text-xs font-bold uppercase tracking-widest  hover:bg-transparent hover:text-primary transition-all duration-300 rounded-sm">Download C.V</a>
+            <a href="#contact" class="px-7 py-3 text-[#1c1c1c] text-xs font-bold uppercase tracking-widest border-2 border-[#1c1c1c] hover:bg-[#1c1c1c] hover:text-white transition-all duration-300 rounded-sm">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SERVICES ====== -->
+  <section id="services" class="py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center ">
+        <h3 class="section-title font-montserrat font-bold text-4xl text-gray-800">Services.</h3>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-3 gap-8 md:mx-20">
+        <div class="service-card bg-white p-10 text-center rounded-sm">
+          <span class="text-4xl mb-5 block">  <i class="fa-solid fa-laptop" style="color: rgb(15, 15, 15);"></i></span>
+          <h6 class="font-bold text-gray-800 text-base mb-3">Web Design</h6>
+          <p class="text-gray-500 text-sm leading-relaxed">Lorem Ipsum is simply dummy text of the Lorem Ipsum has been the industry's standard dummy text ever.</p>
+        </div>
+        <div class="service-card bg-white p-10 text-center rounded-sm">
+          <span class="text-4xl mb-5 block">  <i class="fa-solid fa-bullhorn" style="color: rgb(18, 18, 19);"></i></span>
+          <h6 class="font-bold text-gray-800 text-base mb-3">Branding</h6>
+          <p class="text-gray-500 text-sm leading-relaxed">Lorem Ipsum is simply dummy text of the Lorem Ipsum has been the industry's standard dummy text ever.</p>
+        </div>
+        <div class="service-card bg-white p-10 text-center rounded-sm">
+          <span class="text-4xl mb-5 block">  <i class="fa-solid fa-umbrella" style="color: rgb(18, 17, 19);"></i></span>
+          <h6 class="font-bold text-gray-800 text-base mb-3">Development</h6>
+          <p class="text-gray-500 text-sm leading-relaxed">Lorem Ipsum is simply dummy text of the Lorem Ipsum has been the industry's standard dummy text ever.</p>
+        </div>
+        <div class="service-card bg-white p-10 text-center rounded-sm">
+          <span class="text-4xl mb-5 block">  <i class="fa-regular fa-gem" style="color: rgb(13, 12, 13);"></i></span>
+          <h6 class="font-bold text-gray-800 text-base mb-3">Creative Design</h6>
+          <p class="text-gray-500 text-sm leading-relaxed">Lorem Ipsum is simply dummy text of the Lorem Ipsum has been the industry's standard dummy text ever.</p>
+        </div>
+        <div class="service-card bg-white p-10 text-center rounded-sm">
+          <span class="text-4xl mb-5 block">  <i class="fa-solid fa-desktop" style="color: rgb(14, 14, 15);"></i></span>
+          <h6 class="font-bold text-gray-800 text-base mb-3">Fully Responsive</h6>
+          <p class="text-gray-500 text-sm leading-relaxed">Lorem Ipsum is simply dummy text of the Lorem Ipsum has been the industry's standard dummy text ever.</p>
+        </div>
+        <div class="service-card bg-white p-10 text-center rounded-sm">
+          <span class="text-4xl mb-5 block">  <i class="fa-solid fa-camera" style="color: rgb(18, 18, 19);"></i></span>
+          <h6 class="font-bold text-gray-800 text-base mb-3">Retina Ready</h6>
+          <p class="text-gray-500 text-sm leading-relaxed">Lorem Ipsum is simply dummy text of the Lorem Ipsum has been the industry's standard dummy text ever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PORTFOLIO ====== -->
+  <section id="portfolio" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <h3 class="section-title font-montserrat font-bold text-4xl text-gray-800">Portfolio.</h3>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        <button class="filter-btn px-5 py-2 text-xs font-semibold uppercase tracking-widest  border-gray-300 text-gray-500 rounded-sm transition-all duration-300" data-filter="all">All</button>
+        <button class="filter-btn px-5 py-2 text-xs font-semibold uppercase tracking-widest  border-gray-300 text-gray-500 rounded-sm  transition-all duration-300" data-filter="brand">Brand</button>
+        <button class="filter-btn px-5 py-2 text-xs font-semibold uppercase tracking-widest  border-gray-300 text-gray-500 rounded-sm  transition-all duration-300" data-filter="web">Design</button>
+        <button class="filter-btn px-5 py-2 text-xs font-semibold uppercase tracking-widest  border-gray-300 text-gray-500 rounded-sm  transition-all duration-300" data-filter="graphic">Graphic</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+        <div class="port-item relative overflow-hidden rounded-sm cursor-pointer" data-cat="graphic">
+          <div class="h-[90VH]  md:h-56 md:w-full flex items-center justify-center text-5xl" style="background: linear-gradient(135deg,#667eea,#764ba2);">
+            <img src="./image1/1.jpg" alt="">
+          </div>
+          <div class="overlay absolute inset-0 bg-white/50 flex flex-col items-center justify-center gap-4">
+            <h6 class="text-black text-xs tracking-widest uppercase font-semibold">Web Design</h6>
+            <div class="flex gap-3">
+              <a href="#0" class="w-9 h-9 border border-black rounded-full flex items-center justify-center text-black text-sm bg-black hover:bg-white hover:text-primary transition-all">🔗</a>
+              <a href="#0" class="w-9 h-9 border border-black rounded-full flex items-center justify-center text-black text-sm bg-black hover:bg-white hover:text-primary transition-all">🔍</a>
+            </div>
+          </div>
+        </div>
+        <div class="port-item relative overflow-hidden rounded-sm cursor-pointer" data-cat="web">
+          <div class="h-[90VH] md:h-56 md:w-full flex items-center justify-center text-5xl" style="background: linear-gradient(135deg,#f093fb,#f5576c);">
+          <img src="./image1/2.jpg" alt="">
+          </div>
+          <div class="overlay absolute inset-0 bg-white/50 flex flex-col items-center justify-center gap-4">
+            <h6 class="text-black text-xs tracking-widest uppercase font-semibold">Web Design</h6>
+            <div class="flex gap-3">
+              <a href="#0" class="w-9 h-9 border border-black rounded-full flex items-center justify-center text-black text-sm bg-black hover:bg-white hover:text-primary transition-all">🔗</a>
+              <a href="#0" class="w-9 h-9 border border-black rounded-full flex items-center justify-center text-black text-sm bg-black hover:bg-white hover:text-primary transition-all">🔍</a>
+            </div>
+          </div>
+        </div>
+        <div class="port-item relative overflow-hidden rounded-sm cursor-pointer" data-cat="graphic">
+          <div class="h-[90VH] md:h-56 flex items-center justify-center text-5xl" style="background: linear-gradient(135deg,#4facfe,#00f2fe);">
+            <img src="./image1/3.jpg" alt="">
+          </div>
+          <div class="overlay absolute inset-0 bg-white/50 flex flex-col items-center justify-center gap-4">
+            <h6 class="text-black text-xs tracking-widest uppercase font-semibold">Web Design</h6>
+            <div class="flex gap-3">
+              <a href="#0" class="w-9 h-9 border border-black rounded-full flex items-center justify-center text-white text-sm bg-black hover:bg-white hover:text-primary transition-all">🔗</a>
+              <a href="#0" class="w-9 h-9 border border-black rounded-full flex items-center justify-center text-white text-sm bg-black hover:bg-white hover:text-primary transition-all">🔍</a>
+            </div>
+          </div>
+        </div>
+        <div class="port-item relative overflow-hidden rounded-sm cursor-pointer" data-cat="brand">
+          <div class="h-[90VH] md:h-56 flex items-center justify-center text-5xl" style="background: linear-gradient(135deg,#d0d8d3,#abc6c1);">
+            <img src="./image1/4.jpg" alt="">
+          </div>
+          <div class="overlay absolute inset-0 bg-white/50 flex flex-col items-center justify-center gap-4">
+            <h6 class="text-black text-xs tracking-widest uppercase font-semibold">Web Design</h6>
+            <div class="flex gap-3">
+              <a href="#0" class="w-9 h-9 border border-black rounded-full flex items-center justify-center text-white text-sm bg-black hover:bg-white hover:text-primary transition-all">🔗</a>
+              <a href="#0" class="w-9 h-9 border border-black rounded-full flex items-center justify-center text-white text-sm bg-black hover:bg-white hover:text-primary transition-all">🔍</a>
+            </div>
+          </div>
+        </div>
+        <div class="port-item relative overflow-hidden rounded-sm cursor-pointer" data-cat="web graphic">
+          <div class="h-[90VH] md:h-56 flex items-center justify-center text-5xl" style="background: linear-gradient(135deg,#fa709a,#fee140);">
+            <img src="./image1/5.jpg" alt="">
+          </div>
+          <div class="overlay absolute inset-0 bg-white/50 flex flex-col items-center justify-center gap-4">
+            <h6 class="text-blac text-xs tracking-widest uppercase font-semibold">Web Design</h6>
+            <div class="flex gap-3">
+              <a href="#0" class="w-9 h-9 border border-black rounded-full flex items-center justify-center text-white text-sm bg-black hover:bg-white hover:text-primary transition-all">🔗</a>
+              <a href="#0" class="w-9 h-9 border border-black rounded-full flex items-center justify-center text-white text-sm bg-black hover:bg-white hover:text-primary transition-all">🔍</a>
+            </div>
+          </div>
+        </div>
+        <div class="port-item relative overflow-hidden rounded-sm cursor-pointer" data-cat="brand">
+          <div class="h-[90VH] md:h-56 flex items-center justify-center text-5xl" style="background: linear-gradient(135deg,#a18cd1,#fbc2eb);">
+            <img src="./image1/6.jpg" alt="">
+          </div>
+          <div class="overlay absolute inset-0 bg-white/50 flex flex-col items-center justify-center gap-4">
+            <h6 class="text-black text-xs tracking-widest uppercase font-semibold">Web Design</h6>
+            <div class="flex gap-3">
+              <a href="#0" class="w-9 h-9 border border-black rounded-full flex items-center justify-center text-white text-sm bg-black hover:bg-white hover:text-primary transition-all">🔗</a>
+              <a href="#0" class="w-9 h-9 border border-black rounded-full flex items-center justify-center text-white text-sm bg-black hover:bg-white hover:text-primary transition-all">🔍</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TESTIMONIALS ====== -->
+  <section id="clients" class="py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <h3 class="section-title font-montserrat font-bold text-4xl text-gray-800">Testimonials.</h3>
+      </div>
+      <div class="max-w-2xl mx-auto text-center">
+        <div id="testi-active">
+          <div id="testi-avatar" class="w-20 h-20 rounded-full mx-auto mb-6 bg-gradient-to-br from-primary to-red-800 flex items-center justify-center text-white text-3xl font-bold">
+            <img src="./image1/1 (1).jpg" alt="" class="w-20 h-20 rounded-full">
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed italic mb-5">"  "</p>
+          <h6 id="testi-name" class="font-bold text-gray-800 mb-1">Alex Smith</h6>
+          <span id="testi-role" class="text-gray-500 text-xs font-medium uppercase tracking-widest">Envato Customer</span>
+        </div>
+        <div class="flex justify-center gap-2 mt-7">
+          <button class="testi-dot w-3 h-3 rounded-full bg-gray-300 border-none cursor-pointer" data-idx="0"></button>
+          <button class="testi-dot w-3 h-3 rounded-full bg-gray-300 border-none cursor-pointer" data-idx="1"></button>
+          <button class="testi-dot w-3 h-3 rounded-full bg-gray-300 border-none cursor-pointer" data-idx="2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== NUMBERS ====== -->
+  <div class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 text-center">
+        <div>
+          <span class="text-4xl block mb-3"><i class="fa-solid fa-users" style="color: rgb(18, 18, 19);"></i></span>
+          <h3 class="counter-num font-montserrat font-extrabold text-5xl text-black mb-2" data-target="850">0</h3>
+          <p class="text-gray-300 text-xs uppercase tracking-widest">Happy Customers</p>
+        </div>
+        <div>
+          <span class="text-4xl block mb-3"><i class="fa-solid fa-thumbs-up" style="color: rgb(18, 18, 19);"></i></span>
+          <h3 class="counter-num font-montserrat font-extrabold text-5xl text-black mb-2" data-target="230">0</h3>
+          <p class="text-gray-500 text-xs uppercase tracking-widest">Complete Projects</p>
+        </div>
+        <div>
+          <span class="text-4xl block mb-3"><i class="fa-solid fa-bullhorn" style="color: rgb(18, 18, 19);"></i></span>
+          <h3 class="counter-num font-montserrat font-extrabold text-5xl text-black mb-2" data-target="9450">0</h3>
+          <p class="text-gray-500 text-xs uppercase tracking-widest">Lines Of Code</p>
+        </div>
+        <div>
+          <span class="text-4xl block mb-3"><i class="fa-solid fa-cloud-arrow-down" style="color: rgb(18, 18, 19);"></i></span>
+          <h3 class="counter-num font-montserrat font-extrabold text-5xl text-black mb-2" data-target="780">0</h3>
+          <p class="text-gray-500 text-xs uppercase tracking-widest">Files Downloaded</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== BLOG ====== -->
+  <section id="blog" class="py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <h3 class="section-title font-montserrat font-bold text-4xl text-gray-800">Our Blog.</h3>
+      </div>
+      <div id="blog-slider" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 transition-all duration-500">
+        <div class="blog-card bg-white rounded-sm overflow-hidden">
+          <div class="h-44 flex items-center justify-center text-4xl" style="background: linear-gradient(135deg,#667eea,#764ba2);">
+            <img src="./image1/2 (1).jpg" alt="">
+          </div>
+          <div class="p-5 mt-6">
+            <span class="text-gray text-xs font-bold uppercase tracking-widest block mb-2">WordPress</span>
+            <h4 class="text-gray-800 font-semibold text-sm leading-relaxed mb-3">Top WordPress Themes and Plugins for Hotels, Travel, and</h4>
+            <a href="#0" class="text-gray text-xs font-bold border-b border-gray-500 border-b-2 uppercase tracking-widest ">Read More</a>
+          </div>
+        </div>
+        <div class="blog-card bg-white rounded-sm overflow-hidden">
+          <div class="h-44 flex items-center justify-center text-4xl" style="background: linear-gradient(135deg,#f093fb,#f5576c);">
+            <img src="./image1/1 (2).jpg" alt="">
+          </div>
+          <div class="p-5 mt-6">
+            <span class="text-gray text-xs font-bold uppercase tracking-widest block mb-2">Trends</span>
+            <h4 class="text-gray-800 font-semibold text-sm leading-relaxed mb-3">Master These Awesome New Skills in March 2018</h4>
+            <a href="#0" class="text-gray text-xs font-bold border-b border-gray-500 border-b-2 uppercase tracking-widest ">Read More</a>
+          </div>
+        </div>
+        <div class="blog-card bg-white rounded-sm overflow-hidden">
+          <div class="h-44 flex items-center justify-center text-4xl" style="background: linear-gradient(135deg,#4facfe,#00f2fe);">
+            <img src="./image1/4 (1).jpg" alt="">
+          </div>
+          <div class="p-5 mt-6">
+            <span class="text-gray text-xs font-bold uppercase tracking-widest block mb-2">Themeforest</span>
+            <h4 class="text-gray-800 font-semibold text-sm leading-relaxed mb-3">The 20 Best Lightroom Presets You Need to Know About</h4>
+            <a href="#0" class="text-gray text-xs font-bold border-b border-gray-500 border-b-2 uppercase tracking-widest ">Read More</a>
+          </div>
+        </div>
+        <div class="blog-card bg-white rounded-sm overflow-hidden">
+          <div class="h-44 flex items-center justify-center text-4xl" style="background: linear-gradient(135deg,#43e97b,#38f9d7);">
+            <img src="./image1/3 (1).jpg" alt="">
+            </div>
+          <div class="p-5 mt-6">
+            <span class="text-gray text-xs font-bold uppercase tracking-widest block mb-2">Trends</span>
+            <h4 class="text-gray-800 font-semibold text-sm leading-relaxed mb-3">Best Design Items to Appeal to the Millennial Generation</h4>
+            <a href="#0" class="text-gray text-xs font-bold border-b border-gray-500 border-b-2 uppercase tracking-widest">Read More</a>
+          </div>
+        </div>
+
+      </div>
+        <div id="blog-dots" class="flex justify-center gap-2 mt-7">
+        <!-- mobile (4 boutons) -->
+        <button class="dot w-3 h-3 rounded-full bg-gray-300" data-idx="0"></button>
+        <button class="dot w-3 h-3 rounded-full bg-gray-300" data-idx="1"></button>
+        <button class="dot w-3 h-3 rounded-full bg-gray-300" data-idx="2"></button>
+        <button class="dot w-3 h-3 rounded-full bg-gray-300" data-idx="3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <section id="contact" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <h3 class="section-title font-montserrat font-bold text-4xl text-gray-800">Contact Us.</h3>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center mb-14">
+        <div>
+          <span class="text-3xl block mb-3"><i class="fa-solid fa-location-arrow" style="color: rgb(18, 18, 19);"></i></span>
+          <h6 class="font-bold text-gray-800 mb-2">Address</h6>
+          <p class="text-gray-500 text-sm">6834 Hollywood Blvd - Los Angeles CA</p>
+        </div>
+        <div>
+          <span class="text-3xl block mb-3"><i class="fa-solid fa-envelope" style="color: rgb(18, 18, 19);"></i></span>
+          <h6 class="font-bold text-gray-800 mb-2">Email</h6>
+          <p class="text-gray-500 text-sm">Support@website.com</p>
+        </div>
+        <div>
+          <span class="text-3xl block mb-3"><i class="fa-solid fa-phone" style="color: rgb(18, 18, 19);"></i></span>
+          <h6 class="font-bold text-gray-800 mb-2">Phone</h6>
+          <p class="text-gray-500 text-sm">+20 010 2517 8918</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="max-w-3xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
+          <input type="text" placeholder="Name" required
+            class="form-input w-full px-4 py-2 border border-gray-200 rounded-sm text-sm text-gray-700 bg-gray-50 transition-all duration-300">
+          <input type="email" placeholder="Email" required
+            class="form-input w-full px-4 py-2 border border-gray-200 rounded-sm text-sm text-gray-700 bg-gray-50 transition-all duration-300">
+        </div>
+        <div class="mb-5">
+          <textarea placeholder="Message" rows="6" required
+            class="form-input w-full px-4 py-3.5 border border-gray-200 rounded-sm text-sm text-gray-700 bg-gray-50 resize-y transition-all duration-300"></textarea>
+        </div>
+        <button type="button"
+          class="px-10 py-2.5 bg-[#1c1c1c] text-white text-xs  tracking-widest border-2 border-[#1c1c1c] rounded-md hover:bg-transparent hover:text-[#1c1c1c] transition-all duration-300 font-poppins">
+          Submit
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="bg-gray-900 py-7 text-center">
+    <p class="text-white/40 text-xs tracking-widest">Copy Right 2018 &copy; By Daniels All Rights Reserved</p>
+  </footer>
+
+
+
+
+
+
+
+
+  <script src="javascr/index.js"></script>
+</body>
+</html>
