@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---- TYPED TEXT ----
   const typedEl = document.getElementById('typed-text');
   if (typedEl) {
-    const words = ['Larry Daniels', 'Developer', 'Designer'];
+    const words = ['Bakary gassama', 'Developer', 'Designer'];
     let wi = 0, ci = 0, deleting = false;
 
     function type() {
@@ -136,13 +136,13 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         name: 'Alex Smith',
         role: 'Envato Customer',
-        img: './image1/1 (1).jpg',
+        img: './image1/new image1.jpg',
         text: "Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book."
       },
       {
         name: 'Alex Smith',
         role: 'Envato Customer',
-        img: './image1/1 (1).jpg',
+        img: './image1/new image2.jpg',
         text: "Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book."
       }
     ];
