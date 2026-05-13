@@ -271,19 +271,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 function setWhite() {
+  const navLinks = document.querySelectorAll(".navbar");
   navLinks.forEach(link => {
     link.classList.remove("text-black/80");
     link.classList.add("text-white");
   });
 
   logo.classList.remove("text-black");
-  logo.classList.add("text-white");
+  logo.classList.add("text-black");
 
-  burgerBtn.classList.remove("text-black");
-  burgerBtn.classList.add("text-white");
+  burger.classList.remove("text-black");
+  burger.classList.add("text-white");
 }
 
 function setBlack() {
+  const navLinks = document.querySelectorAll(".navbar");
   navLinks.forEach(link => {
     link.classList.remove("text-white");
     link.classList.add("text-black/80");
@@ -292,11 +294,11 @@ function setBlack() {
   logo.classList.remove("text-white");
   logo.classList.add("text-black");
 
-  burgerBtn.classList.remove("text-white");
-  burgerBtn.classList.add("text-black");
+  burger.classList.remove("text-white");
+  burger.classList.add("text-black");
 }
 window.addEventListener("scroll", () => {
-
+const firstSection = document.querySelector("#navbar");
   const sectionHeight = firstSection.offsetHeight;
 
   if (window.scrollY < sectionHeight - 50) {
@@ -307,6 +309,8 @@ window.addEventListener("scroll", () => {
 
 });
 // état initial
+const firstSection = document.querySelector("#navbar");
+
 if (window.scrollY < firstSection.offsetHeight - 50) {
   setWhite();
 } else {

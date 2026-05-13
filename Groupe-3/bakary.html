@@ -44,7 +44,8 @@
     }
   </script>
 
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="style.css">
+
 
 
 </head>
@@ -59,7 +60,7 @@
    <div>
 
    
-  <nav class="fixed top-0 left-0 w-full  backdrop-blur-sm z-50 py-4 pt-6 " >
+  <nav id="navbar" class="fixed top-0 left-0 w-full  backdrop-blur-sm z-50 py-4 pt-6 " >
       
     <div class="max-w-6xl mx-auto px-6 flex items-center justify-between pt-6 ">
       <a href="#home" id="logo" class="text-black font-montserrat font-bold text-xl tracking-widest ">Daniels</a>
@@ -78,8 +79,6 @@
       <!-- Mobile burger -->
       <button id="burger" class="md:hidden text-black text-2xl focus:outline-none">☰</button>
     </div>
-      <!-- overlay for mobile menu  -->
-     <!-- <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-40"></div> -->
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden  px-6 pb-4 mt-2 bg-white">
       <ul class="flex flex-col gap-4 text-center justify-center">
@@ -102,12 +101,39 @@
   <canvas id="particles-canvas" class="absolute inset-0 w-full h-full z-0"></canvas>
    
     <div class="relative z-10 max-w-6xl mx-auto px-6 pt-20">
-      <p class="text-white text-sm font-medium uppercase tracking-[5px] mb-5 text-center">Hello</p>
+      <p class="text-white text-sm font-medium uppercase tracking-[5px] mt-4 mb-5 text-center">Hello</p>
       <h1 class="text-white font-montserrat font-400 text-5xl md:text-7xl leading-tight mb-8">
         I Am <span id="typed-text" class="text-white font-bold text-5xl md:text-7xl"></span>
       </h1>
+
+ <!-- ══ VIDEO MODAL ══ -->
+<section class="relative w-full h-screen overflow-hidden">
+
+  <!-- Vidéo YouTube -->
+  <iframe
+    class="absolute top-0 left-0 w-full h-full"
+    src="https://www.youtube.com/embed/aqXc3GgOgW8?autoplay=1&mute=1&controls=0&loop=1&playlist=aqXc3GgOgW8&playsinline=1"
+    title="Présentation"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+
+  <!-- Overlay sombre -->
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- Contenu -->
+  <div class="relative z-10 flex items-center justify-center h-full text-white text-center">
+    <div>
+      <!-- <h1 class="text-5xl font-bold">Bienvenue</h1>
+      <p class=" text-lg">Développeur Web Frontend</p> -->
+    </div>
+  </div>
+
+</section>
+
       <!-- Social Icons -->
-      <div class="flex gap-3 mt-6 text-center justify-center">
+      <div class="flex gap-3 mt-6 mb-4 text-center justify-center">
         <a href="#0" class="w-10 h-10 border border-white/30 rounded-full flex items-center justify-center text-white text-sm font-bold  hover:border-primary transition-all duration-300">
           <i class="fa-brands fa-facebook-f" style="color: rgb(245, 244, 248);"></i>
         </a>
@@ -126,7 +152,8 @@
       </div>
     </div>
   </section>
-  
+
+ 
 
   <!-- ====== ABOUT ====== -->
   <section id="about" class="py-24 bg-white">
@@ -146,7 +173,6 @@
           </p>
 
           <!-- Skills -->
-
           <div class="space-y-4 mb-8">
             <div>
               <div class="flex justify-between text-sm font-semibold text-gray-700 mb-1"><span>Web Design</span><span>95%</span></div>
@@ -232,7 +258,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
         <div class="port-item relative overflow-hidden rounded-sm cursor-pointer" data-cat="graphic">
           <div class="h-[90VH]  md:h-56 md:w-full flex items-center justify-center text-5xl" style="background: linear-gradient(135deg,#667eea,#764ba2);">
-            <img src="./image1/1.jpg" alt="">
+            <img src="./image1/1 (2).jpg" alt="">
           </div>
           <div class="overlay absolute inset-0 bg-white/50 flex flex-col items-center justify-center gap-4">
             <h6 class="text-black text-xs tracking-widest uppercase font-semibold">Web Design</h6>
@@ -405,10 +431,8 @@
             <a href="#0" class="text-gray text-xs font-bold border-b border-gray-500 border-b-2 uppercase tracking-widest">Read More</a>
           </div>
         </div>
-
       </div>
         <div id="blog-dots" class="flex justify-center gap-2 mt-7">
-        <!-- mobile (4 boutons) -->
         <button class="dot w-3 h-3 rounded-full bg-gray-300" data-idx="0"></button>
         <button class="dot w-3 h-3 rounded-full bg-gray-300" data-idx="1"></button>
         <button class="dot w-3 h-3 rounded-full bg-gray-300" data-idx="2"></button>
@@ -468,13 +492,106 @@
     <p class="text-white/40 text-xs tracking-widest">Copy Right 2018 &copy; By Daniels All Rights Reserved</p>
   </footer>
 
+  <!-- ══ MOBILE BOTTOM NAVBAR ══ -->
+  <nav id="bottom-nav" aria-label="Navigation mobile">
+    <a href="#home" class="active">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+    <a href="#about">
+      <i class="fa-solid fa-user"></i>
+      <span>About</span>
+    </a>
+    <a href="#services">
+      <i class="fa-solid fa-briefcase"></i>
+      <span>Services</span>
+    </a>
+    <a href="#portfolio">
+      <i class="fa-solid fa-image"></i>
+      <span>Works</span>
+    </a>
+    <a href="#blog">
+      <i class="fa-solid fa-newspaper"></i>
+      <span>Blog</span>
+    </a>
+    <a href="#contact">
+      <i class="fa-solid fa-envelope"></i>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <script src="javascr/index.js" defer></script>
+
+  <!-- ══ MODAL + BOTTOM NAV SCRIPTS ══ -->
+  <script>
+    // ── VIDEO MODAL ──
+    const modal      = document.getElementById('video-modal');
+    const iframe     = document.getElementById('video-iframe');
+    const openBtn    = document.getElementById('open-video-btn');
+    const closeBtn   = document.getElementById('close-video-btn');
+
+    // ⚠️  Remplace cette URL par l'embed de ta propre vidéo
+    const VIDEO_URL = 'https://www.youtube.com/embed/aqXc3GgOgW8?autoplay=1&mute=1&controls=0&loop=1&playlist=aqXc3GgOgW8&playsinline=1';
+
+    openBtn.addEventListener('click', () => {
+      iframe.src = VIDEO_URL;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+
+    function closeModal() {
+      modal.classList.remove('open');
+      iframe.src = '';                   // stoppe la vidéo
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+
+    // Clic sur le fond sombre → ferme
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Touche Echap → ferme
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // ── BOTTOM NAV — active link on scroll ──
+    const sections   = document.querySelectorAll('section[id], div[id="home"]');
+    const bottomLinks = document.querySelectorAll('#bottom-nav a');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          bottomLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+
+    document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
 
 
 
+  
 
+  const links = document.querySelectorAll("#bottom-nav a");
 
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault(); // évite le saut de page si c'est un #
+      
+      // Retirer active de tous les liens
+      links.forEach(l => l.classList.remove("active"));
+      
+      // Ajouter active au lien cliqué
+      link.classList.add("active");
+    });
+  });
+  </script>
 
-
-  <script src="javascr/index.js"></script>
 </body>
 </html>

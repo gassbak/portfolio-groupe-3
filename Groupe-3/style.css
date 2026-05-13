@@ -1,0 +1,103 @@
+    /* ── VIDEO MODAL ── */
+    #video-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
+    }
+    #video-modal.open {
+      display: flex;
+    }
+    #video-modal .modal-box {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      aspect-ratio: 16/9;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+      animation: modalIn 0.35s cubic-bezier(0.22,1,0.36,1) both;
+    }
+    @keyframes modalIn {
+      from { opacity:0; transform: scale(0.88) translateY(20px); }
+      to   { opacity:1; transform: scale(1) translateY(0); }
+    }
+    #video-modal .modal-box iframe,
+    #video-modal .modal-box video {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+    #video-modal .modal-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+    #video-modal .modal-close:hover { color: #e74c3c; }
+
+    /* ── MOBILE BOTTOM NAVBAR ── */
+    @media (max-width: 767px) {
+      /* Push page content so bottom nav doesn't overlap footer */
+      body { padding-bottom: 64px; }
+
+      /* Hide top burger & mobile-menu */
+      #burger { display: none !important; }
+      #mobile-menu { display: none !important; }
+
+      /* Bottom nav */
+      #bottom-nav {
+        display: flex;
+      }
+    }
+    @media (min-width: 768px) {
+      #bottom-nav { display: none !important; }
+    }
+
+    #bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: #fff;
+      border-top: 1px solid #e5e7eb;
+      justify-content: space-around;
+      align-items: center;
+      height: 60px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+    }
+    #bottom-nav a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      color: #6b7280;
+      text-decoration: none;
+      font-size: 9px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+      flex: 1;
+      padding: 6px 0;
+    }
+    #bottom-nav a i {
+      font-size: 17px;
+    }
+    #bottom-nav a:hover,
+    #bottom-nav a.active {
+      color: #242323;
+    }
